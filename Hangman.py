@@ -2,6 +2,11 @@ import sys
 import os
 import random
 
+##
+# Hangman Class.
+#   written by x-2f
+#   10/15/2022
+##
 class Hangman:
 	structure = [
 		["    U         |", "   (_)        |"],
@@ -197,9 +202,15 @@ class Hangman:
 				response = 3
 				continue
 			response = self.process(last_char)
-
+		# Returns whether it's a win
 		return response == 4
 
+##
+# Creates and starts a game.
+#   If no argument is given, the phrase will
+#   be the default, "Hello, World!"
+# 	Otherwise it will be the first argument given.
+##
 if __name__ == "__main__":
 	default_phrase = "Hello, world!"
 	phrase = default_phrase
